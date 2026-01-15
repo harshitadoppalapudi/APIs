@@ -5,12 +5,12 @@
 # They are provided by a third-party and are governed by
 # separate terms of service, privacy policy, and support
 # documentation.
-
 name: Java CI (Safe)
 
 on:
   pull_request:
-    branches: [ "main" ]
+    branches: 
+      - "main"
 
 jobs:
   build:
@@ -23,10 +23,10 @@ jobs:
       - name: Set up Java
         uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
+          distribution: temurin
           java-version: '11'
 
-      - name: Verify Java
-        run: java -version
+
+     
 
     
